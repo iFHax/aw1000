@@ -17,13 +17,3 @@ sed -i "s/option ssid.*/option ssid 'DCWRT'/" openwrt/package/kernel/mac80211/fi
 
 # Change DISTRIB_DESCRIPTION to DCWRT
 sed -i 's/DISTRIB_DESCRIPTION="LEDE"/DISTRIB_DESCRIPTION="DCWRT"/' openwrt/package/base-files/files/etc/openwrt_release
-
-# Set up default OPKG feed configuration
-cat <<EOF > openwrt/package/base-files/files/etc/opkg/distfeeds.conf
-src/gz openwrt_core https://downloads.openwrt.org/releases/24.10.0/targets/qualcommax/ipq807x/packages
-src/gz openwrt_base https://downloads.openwrt.org/releases/24.10.0/packages/aarch64_cortex-a53/base
-src/gz openwrt_luci https://downloads.openwrt.org/releases/24.10.0/packages/aarch64_cortex-a53/luci
-src/gz openwrt_packages https://downloads.openwrt.org/releases/24.10.0/packages/aarch64_cortex-a53/packages
-src/gz openwrt_routing https://downloads.openwrt.org/releases/24.10.0/packages/aarch64_cortex-a53/routing
-src/gz openwrt_telephony https://downloads.openwrt.org/releases/24.10.0/packages/aarch64_cortex-a53/telephony
-EOF 
