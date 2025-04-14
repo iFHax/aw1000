@@ -14,3 +14,7 @@ echo 'net.ipv4.ip_default_ttl=64' >> openwrt/package/base-files/files/etc/sysctl
 
 ## Change default SSID to "DCWRT"
 sed -i "s/option ssid.*/option ssid 'DCWRT'/" openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+# Change DISTRIB_DESCRIPTION to DCWRT
+sed -i 's/DISTRIB_DESCRIPTION="LEDE"/DISTRIB_DESCRIPTION="DCWRT"/' openwrt/package/base-files/files/etc/openwrt_release
+
