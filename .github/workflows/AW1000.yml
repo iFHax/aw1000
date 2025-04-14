@@ -136,7 +136,7 @@ jobs:
       run: |
           echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
           touch release.txt
-          echo -e "使用lede源码编译Arcadyan_AW1000的固件" >> release.txt
+          echo -e "Compiled firmware for Arcadyan_AW1000 using LEDE source code" >> release.txt
           echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
